@@ -228,65 +228,101 @@ section {
   /* My Work Section */
 
 #MyWork {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Distribute space between the items */
-  padding: 20px; /* Add some padding around the section */
+    text-align: center;
+    padding: 20px;
+    overflow: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--accent-color, #0ca8f0) white; /* For Firefox */
 }
 
-#MyWork h2 {
-  color: black;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 30px;
+/* For Webkit browsers (Chrome, Safari, etc.) */
+#MyWork::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
 }
 
-.details-container {
-  background-color: white; /* White background for the containers */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  padding: 20px;
-  margin: 10px;
-  width: calc(50% - 40px); /* Two items per row with space in between */
-  box-sizing: border-box;
+#MyWork::-webkit-scrollbar-track {
+  background: white; /* Color of the track */
 }
 
-.details-container img.project-img {
-  display: block;
-  margin: 0 auto 20px; /* Center the image and add space below it */
-  width: 50px; /* Set the image width */
-  height: auto;
+#MyWork::-webkit-scrollbar-thumb {
+  background-color: #14bde7); /* Color of the scroll thumb */
+  border-radius: 4px; /* Rounded corners on the thumb */
 }
 
-.project-title {
-  font-size: 1.5em;
-  text-align: center;
-  margin: 0 0 20px; /* Add space below the title */
+#MyWork::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(192, 100%, 40%); /* Color of the thumb on hover */
+}
+
+#MyWork .title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color, #00ff00);
+}
+
+#MyWork .details-container {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 20px);
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.project-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.experience-sub-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 .btn-container {
-  text-align: center;
+    text-align: center;
 }
 
 .btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #00ff22;
-  color: white;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.btn-color-2 {
+    background-color: var(--accent-color, #00ff00);
+    color: #000000;
 }
 
+.btn-color-2:hover {
+    background-color: #00cc00;
+}
+
+@media (max-width: 1200px) {
+    #MyWork .details-container {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    #MyWork .details-container {
+        width: calc(100% - 20px);
+    }
+}
 
 /* Skills Section */
 #skills {
     padding: 100px 0;
+    text-align: center;
 }
 
 .skills-grid {
@@ -307,19 +343,6 @@ section {
     margin: 0 auto;
 }
 
-/* Starry Background Effect */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-image: radial-gradient(#ffffff 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.1;
-}
 /* WebKit-based browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 12px; /* Adjust width as needed */
