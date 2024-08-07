@@ -161,6 +161,7 @@ section {
   
 #about h1 {
     color: #2de708;
+    font-size: 2.5rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 30px;
@@ -320,27 +321,73 @@ section {
 }
 
 /* Skills Section */
+
 #skills {
-    padding: 100px 0;
-    text-align: center;
+    text-align: center; /* Center align all text */
+    padding: 20px;
+}
+#skills h2 {
+    color: #00cc00;
+    font-size: 2.5rem;
+}
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+.about-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.skill-icon {
-    width: 80px;
-    height: 80px;
-    background-color: #1e1e3f;
-    border-radius: 50%;
+/* Styling for articles */
+article {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 10px 0;
+    text-align: left; 
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article img.icon {
+    width: 50px; /* Medium size for the icons */
+    height: auto;
+    margin-right: 15px;
+}
+
+article div {
+    display: flex;
+    align-items: center;
+}
+
+article p {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1.5; /* Ensure consistent spacing between lines */
+    text-align: left;
+}
+
+/* Styling for the skills-grid */
+.skills-grid-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically if needed */
+    gap: 20px;               /* Space between each skill icon */
+    padding: 20px;           /* Optional padding */
+}
+
+/* Individual skill grid styling */
+.skills-grid {
+    display: flex;
+    justify-content: center; /* Center the icon inside each grid */
+    align-items: center;
+}
+
+.skills-grid img {
+    width: 50px; /* Medium size for skill icons */
+    height: auto;
 }
 
 /* WebKit-based browsers (Chrome, Safari, Edge) */
