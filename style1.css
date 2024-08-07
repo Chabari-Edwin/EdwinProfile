@@ -339,41 +339,24 @@ section {
     font-size: 2em;
     margin-bottom: 20px;
 }
-
-/* Styling for articles */
-article {
+.skills-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    text-align: left; 
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px; /* Adjust the spacing between each skill */
 }
-
-article img.icon {
-    width: 50px; /* Medium size for the icons */
-    height: auto;
-    margin-right: 15px;
-}
-
-article div {
+.skill-item {
     display: flex;
     align-items: center;
 }
-
-article p {
-    font-size: 1.2em;
-    margin: 0;
-    line-height: 1.5; /* Ensure consistent spacing between lines */
-    text-align: left;
+.skill-item img {
+    margin-right: 10px; /* Adjust the space between the icon and the text */
 }
 
 /* Styling for the skills-grid */
 .skills-grid-container {
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically if needed */
     gap: 20px;               /* Space between each skill icon */
     padding: 20px;           /* Optional padding */
 }
@@ -388,6 +371,41 @@ article p {
 .skills-grid img {
     width: 50px; /* Medium size for skill icons */
     height: auto;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 20px;
+}
+#contact h1 {
+    color:#00cc00;
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.contact-info, .contact-form {
+    background-color: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #0f3460;
+    border: none;
+    color: #ffffff;
+}
+button {
+    background-color: #00ff00;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
 /* WebKit-based browsers (Chrome, Safari, Edge) */
@@ -437,7 +455,6 @@ html {
 /* FOOTER SECTION */
 
 footer {
-    height: 26vh;
     margin: 0 1rem;
     padding-bottom: 0;
   }
